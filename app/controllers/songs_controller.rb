@@ -12,7 +12,7 @@ class SongsController < ApplicationController
   end
 
   def create
-    unless Song.all.include? params[:q]
+    if Song.where(artist: params[:q].capitalize).empty?
       json = JSON.parse(HTTParty.get "https://itunes.apple.com/search?term=#{params[:q]}")
       json["results"].each do |song|
         @song = Song.new

@@ -1,6 +1,8 @@
-<h1>here they are, ya bish</h1>
+<div align="center">
+  <h1>here they are, ya bish</h1>
 
   <% @songs.each do |song| %>
     <h5><%= song.artist %> :: <%= song.track_name %></h5>
-    <%= link_to (image_tag song.art_work), song.preview %>
+    <%= link_to (image_tag song.art_work), song %>
   <% end %>
+</div>

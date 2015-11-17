@@ -1,0 +1,8 @@
+<div align="center">
+  <h1><%= @song.track_name %></h1>
+  <h3>by <%= @song.artist %></h3>
+
+  <%= image_tag @song.art_work %>
+
+  <h3><%= link_to "preview here", @song.preview %></h3>
+</div>
