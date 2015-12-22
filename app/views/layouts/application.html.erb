@@ -9,11 +9,11 @@
 <body>
     <%= link_to "home", root_path %> |
     <%= link_to "add songs", new_song_path %> |
-    <%= link_to "ugh " %>
+    <%= link_to "random song", song_path(Song.all.sample.id) %>
 
 <%= yield %>
 
-<%= link_to "top", root_path %>
+<p><%= link_to "top", root_path %></p>
 
 </body>
 </html>
