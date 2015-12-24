@@ -1,5 +1,10 @@
 class SongsController < ApplicationController
+
+  def home
+  end
+
   def index
+    @playlist = Playlist.first
     @songs = Song.all
   end
 
@@ -38,6 +43,12 @@ class SongsController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def random
+    @song = Song.all.sample
+    @song.plays += 1
+    Playlist.first.songs << @song
   end
 
   private

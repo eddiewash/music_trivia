@@ -8,12 +8,10 @@
 </head>
 <body>
     <%= link_to "home", root_path %> |
-    <%= link_to "add songs", new_song_path %> |
-    <%= link_to "random song", song_path(Song.all.sample.id) %>
+    <%= link_to "add songs", new_playlist_song_path(1) %> |
+    <%= link_to "last played", playlist_path(1) %>
 
 <%= yield %>
-
-<p><%= link_to "top", root_path %></p>
 
 </body>
 </html>

@@ -24,4 +24,6 @@ while artists.empty? == false
   end
 end
 
-puts "all done"
+Playlist.create name: "Last Played"
+
+puts "done ya bish"

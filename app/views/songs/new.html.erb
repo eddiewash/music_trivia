@@ -1,5 +1,5 @@
 <h1>add new songs to the shuffle, ya bish</h1>
 
 <%= form_tag(controller: "songs", action: "create", method: "get") do %>
- <p> itunes search: <%= text_field_tag :q, nil, placeholder: "enter artist" %> <%= submit_tag("get em") %> </p>
+ <p> call itunes: <%= text_field_tag :q, nil, placeholder: "enter artist" %> <%= submit_tag("hit it") %> </p>
 <% end %>

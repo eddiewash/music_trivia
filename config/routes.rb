@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  root 'songs#index'
-  resources :songs
+  root 'songs#home'
+  get '/random' => 'songs#random'
+  resources :playlists, only: :show do
+    resources :songs
+  end
+  # get "/playlist" => "playlists#show"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
