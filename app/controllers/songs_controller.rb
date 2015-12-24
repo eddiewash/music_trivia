@@ -48,6 +48,7 @@ class SongsController < ApplicationController
   def random
     @song = Song.all.sample
     @song.plays += 1
+    @song.last_played = Time.now
     Playlist.first.songs << @song
   end
 

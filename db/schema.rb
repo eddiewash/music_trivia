@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151223233931) do
+ActiveRecord::Schema.define(version: 20151224051841) do
 
   create_table "playlists", force: :cascade do |t|
     t.string   "name"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20151223233931) do
     t.datetime "updated_at",              null: false
     t.integer  "playlist_id"
     t.integer  "plays",       default: 0
+    t.datetime "last_played"
   end
 
   add_index "songs", ["playlist_id"], name: "index_songs_on_playlist_id"
