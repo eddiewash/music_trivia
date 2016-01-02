@@ -4,6 +4,7 @@
 
   <% @songs.each do |song| %>
     <h5><%= song.artist %> :: <%= song.track_name %></h5>
+    <h6>played at <%= song.created_at.strftime("%H:%M") %> (<%= song.created_at.strftime("%d %b. %Y") %>)</h6>
     <%= link_to (image_tag song.art_work), playlist_song_path(@playlist, song) %>
   <% end %>
 
